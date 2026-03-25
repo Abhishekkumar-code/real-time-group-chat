@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iChat</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="CHATBUDDY.png">
+
+  <!-- Socket.IO -->
+  <script defer src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <!-- Main JS -->
+  <script defer src="js/chat.js?v=2"></script>
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav>
+    <img class="logo" src="CHATBUDDY.png" alt="ChatBuddy Logo">
+
+
+    <button id="theme" title="Toggle theme">🌙</button>
+  </nav>
+  <p id="usersCount" style="color:#555;font-weight:bold;"></p>
+  <!-- Chat container -->
+   
+  <div class="container">
+    <!-- Tools (color picker etc.) -->
+    <div class="container2">
+      <input type="color" id="colorPicker" title="Pick a background color">
+      <p id="colorCode"></p>
+    </div>
+    <!-- Messages will appear here dynamically -->
+  </div>
+
+ <p id="typing" style="text-align:center;color:rgb(0, 0, 0);"></p>
+
+  <!-- Send box -->
+  <div class="send">
+    <form id="send-container">
+     
+      <input type="text" name="messageinp" id="messageinp" placeholder="Type your message" autocomplete="off">
+      <button type="button" id="mic-button" title="Voice input">🎤</button>
+    <i class="fa-regular fa-file"></i>
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <p id="transcript" style="margin: 5px 0 0 10px; font-size: 0.9rem; color: gray;"></p>
+      <input type="file" id="fileInputmulter" multiple style="margin: 8px 0;" />
+  </div>
+
+
+</body>
+
+</html>

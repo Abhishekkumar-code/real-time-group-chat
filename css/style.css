@@ -1,0 +1,224 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+
+nav {
+  width: 100%;
+  background: #6C63FF;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 58px;
+  border-radius: 14px;
+}
+
+#theme {
+  cursor: pointer;
+  font-size: 22px;
+  color: white;
+}
+
+
+.container {
+  background: white;
+  width: 92%;
+  max-width: 720px;
+  flex: 1;
+  padding: 20px;
+  border-radius: 18px;
+  margin: 22px 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 60vh;
+border: 1px solid black;
+}
+
+
+.message {
+  max-width: 75%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+.right {
+  align-self: flex-end;
+  background: #FFD700;
+  border-bottom-right-radius: 6px;
+  color: #000;
+}
+
+.left {
+  align-self: flex-start;
+  background: #0CB6DE;
+  border-bottom-left-radius: 6px;
+  color: #000;
+}
+
+.timestamp {
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+  text-align: right;
+  color: rgb(28, 28, 28);
+}
+
+.top {
+  background-color: #000;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.send {
+  width: 92%;
+  max-width: 720px;
+  margin-bottom: 26px;
+}
+
+#send-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#messageinp {
+  flex: 1;
+  min-width: 180px;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 2px solid #6C63FF;
+  background: white;
+  outline: none;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.btn {
+  background: linear-gradient(to right, #6C63FF, #43E97B);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}
+
+
+.fa-regular {
+  font-size: 40px;
+  padding: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f65d5d, #942bf0);
+  border: 2px solid rgba(255,255,255,0.35);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.fa-regular:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 77, 77, 1),
+              0 0 25px rgba(138, 0, 255, 0.8);
+}
+
+#fileInputmulter {
+  display: none;
+}
+
+.container2 {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 20px;
+}
+
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(6px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+@media (max-width: 600px) {
+  .logo {
+    height: 44px;
+  }
+
+  .container {
+    padding: 16px;
+    max-height: 55vh;
+  }
+
+  #send-container {
+    gap: 8px;
+  }
+
+  #messageinp {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .btn {
+    flex: 1;             
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .fa-regular {
+    margin: 0 auto;      /* Center file button */
+    font-size: 34px;
+    padding: 12px;
+  }
+
+  .message {
+    max-width: 90%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  nav {
+    padding: 10px 14px;
+  }
+
+  .send {
+    width: 95%;
+    margin-bottom: 18px;
+  }
+}
